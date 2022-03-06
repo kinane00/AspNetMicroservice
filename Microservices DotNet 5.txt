@@ -1,0 +1,62 @@
+ Le style architectural des microservices est une 
+approche permettant de développer une application 
+unique sous la forme d'une suite logicielle intégrant
+plusieurs services. Ces services sont construits 
+autour des capacités de l'entreprise et peuvent 
+être déployés de façon indépendante.
+
+-----Best practice
+
+- DDD: Domain Driven Design
+
+- CQRS 
+
+- Clean Architrchture
+
+- Postman
+
+-----  Monolithic
+
+- Single Codebase
+- Easy to develop, debug and deployments
+- Complexity
+- Hard maintenance
+- Challenge of making changes
+- Inability to apply new technology
+
+----- Microsevices 
+
+- Independent Services
+
+- Better scalability
+
+- TEchnology Diversity
+
+- Agility
+
+- Small, focused teams
+
+- Challenge of management and traceability
+
+
+------ Microservices Steps
+
+- Create project in github
+
+- Clone to local
+
+- Create Blank solution
+
+- Create Project Catalog Web Api
+
+- Create Mongo Db Database
+
+- Make Architechture Using Layers
+
+- Use Repository Pattern
+
+- Add MongoDB.Driver
+
+- Add Database Connection
+
+- Add Database Context
