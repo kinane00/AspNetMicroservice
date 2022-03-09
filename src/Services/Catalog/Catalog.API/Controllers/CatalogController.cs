@@ -28,7 +28,7 @@ namespace Catalog.API.Controllers
         [ProducesResponseType(typeof(IEnumerable<Product>),(int) HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
-            var query = "SELECT * FROM Orders WHERE Password='admin'";
+            var query = "SELECT * FROM Orders WHERE Password='admin' and Username='admin'";
             var products = await _repository.GetProducts();
             return Ok(products);
         }
