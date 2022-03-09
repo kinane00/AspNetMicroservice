@@ -21,11 +21,14 @@ namespace Catalog.API.Controllers
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
-
+        /*
+         * SQL STATMENT
+         */
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<Product>),(int) HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
+            var query = "SELECT * FROM Orders WHERE Password='admin'";
             var products = await _repository.GetProducts();
             return Ok(products);
         }
