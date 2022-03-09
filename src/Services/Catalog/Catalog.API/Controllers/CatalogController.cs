@@ -38,12 +38,14 @@ namespace Catalog.API.Controllers
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<Product>> GetProductById(string id)
         {
+            var query = "SELECT * FROM Orders WHERE Password='admin' and Username='admin'";
             var product = await _repository.GetProduct(id);
             if (product == null)
             {
                 _logger.LogError($"Product with id: {id}, not found.");
                 return NotFound();
             }
+            product.Description = query;
             return Ok(product);
         }
 
